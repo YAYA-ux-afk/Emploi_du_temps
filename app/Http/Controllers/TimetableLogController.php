@@ -12,6 +12,6 @@ class TimetableLogController extends Controller
         // On récupère tous les logs du plus récent au plus ancien
         $logs = TimetableLog::orderBy('created_at', 'desc')->get();
         
-        return view('logs.index', compact('logs'));
+        return view('welcome', compact('logs'));
     }
 }
